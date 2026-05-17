@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hema ♥ Saro Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  overflow-x:hidden;
+  font-family:'Playfair Display',serif;
+  background:black;
+}
+
+.page{
+  min-height:100vh;
+  width:100%;
+  position:relative;
+}
+
+/* =========================================================
+   SCROLL DOWN
+========================================================= */
+
+.scroll-down{
+
+  position:absolute;
+
+  bottom:20px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:2em;
+
+  color:#ffffff;
+
+  text-shadow:
+    0 0 10px #ff99cc,
+    0 0 20px gold;
+
+  animation:scrollBounce 1.8s infinite;
+
+  z-index:20;
+}
+
+@keyframes scrollBounce{
+
+  0%{
+    transform:translateX(-50%) translateY(0);
+    opacity:0.5;
+  }
+
+  50%{
+    transform:translateX(-50%) translateY(10px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateX(-50%) translateY(0);
+    opacity:0.5;
+  }
+}
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+#page1{
+
+  background:url('sh2.png') center/cover no-repeat;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  overflow:hidden;
+}
+
+#page1::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  background:
+  radial-gradient(circle, rgba(255,215,0,0.4) 2px, transparent 3px);
+
+  background-size:40px 40px;
+
+  animation:sparkleMove 15s linear infinite;
+
+  opacity:0.7;
+}
+
+#page1 h2{
+
+  position:relative;
+  z-index:2;
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:4em;
+
+  color:#ffcc33;
+
+  margin-bottom:25px;
+
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ff6699,
+    0 0 40px gold;
+
+  animation:glowText 2s infinite alternate;
+}
+
+#page1 .button{
+
+  position:relative;
+  z-index:2;
+
+  background:linear-gradient(145deg,#ff3366,#ff6699);
+
+  color:white;
+
+  border:4px solid #ffd700;
+
+  border-radius:50%;
+
+  width:120px;
+  height:120px;
+
+  font-size:2em;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  margin-bottom:35px;
+
+  box-shadow:
+    0 0 20px #ff99cc,
+    0 0 40px gold;
+
+  animation:pulseGlow 2s infinite;
+}
+
+#page1 h1{
+
+  position:relative;
+  z-index:2;
+
+  font-size:2em;
+
+  line-height:1.5;
+
+  padding:0 40px;
+
+  max-width:900px;
+
+  color:#b22222;
+
+  font-weight:bold;
+
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ffd700;
+
+  animation:fadeUp 2s ease;
+}
+
+/* =========================================================
+   PAGE 2
+========================================================= */
+
+#page2{
+
+  background:url('image1sh1.png') center/cover no-repeat;
+
+  display:none;
+
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+
+  padding-top:15cm;
+}
+
+#page2 h1{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:15px;
+}
+
+#page2 .name{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:5em;
+
+  color:#111;
+
+  text-shadow:
+    0 0 10px gold,
+    0 0 20px #ffd700,
+    0 0 40px #fff0b3;
+
+  animation:zoomGlow 3s infinite alternate;
+}
+
+#page2 .weds{
+
+  font-family:'Playfair Display',serif;
+
+  font-size:1.2em;
+
+  font-style:italic;
+
+  color:#222;
+
+  margin-top:25px;
+
+  text-shadow:
+    0 0 10px gold;
+}
+
+#page2 p{
+
+  font-size:1.3em;
+
+  color:black;
+
+  font-style:italic;
+
+  line-height:1.8;
+
+  margin:25px 20px;
+
+  text-shadow:
+    0 0 10px gold;
+
+  animation:floatText 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   PAGE 3
+========================================================= */
+
+#page3{
+
+  background:url('sh33.png') center top/cover no-repeat;
+
+  text-align:center;
+
+  padding:40px 20px 120px;
+}
+
+#page3 h2{
+
+  color:white;
+
+  font-size:2.2em;
+
+  font-family:'Great Vibes',cursive;
+
+  text-shadow:
+    0 0 15px #ff99cc,
+    0 0 25px gold;
+}
+
+#scratchCard{
+
+  position:relative;
+
+  width:300px;
+  height:270px;
+
+  margin-left:auto;
+  margin-right:auto;
+
+  margin-top:15cm;
+}
+
+#weddingDate{
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:300px;
+  height:270px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:1;
+
+  opacity:0;
+
+  transition:opacity 0.8s ease;
+}
+
+#weddingDate.show{
+  opacity:1;
+}
+
+.date-content{
+
+  width:190px;
+  height:190px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  border-radius:50%;
+
+  font-size:2em;
+
+  line-height:1.5;
+
+  font-family:'Great Vibes',cursive;
+
+  color:#ffd700;
+
+  text-shadow:
+    0 0 10px #fff,
+    0 0 25px gold;
+}
+
+#scratchCanvas{
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  z-index:2;
+}
+
+.invite-note{
+
+  margin-top:120px;
+
+  padding:25px;
+
+  background:rgba(255,255,255,0.15);
+
+  border-radius:30px;
+
+  backdrop-filter:blur(6px);
+
+  max-width:700px;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.invite-note h3{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:2.5em;
+
+  color:#ffd700;
+}
+
+.invite-note p{
+
+  font-size:1.2em;
+
+  line-height:1.9;
+
+  color:white;
+}
+
+.invite-note h4{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:2.2em;
+
+  color:#ffccdd;
+}
+
+/* =========================================================
+   PAGE 4
+========================================================= */
+
+#page4{
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.20),
+    rgba(0,0,0,0.20)
+  ),
+  url('sh44.png') center/cover no-repeat;
+
+  text-align:center;
+
+  padding:40px 20px 120px;
+}
+
+.animated-title{
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:3.5em;
+
+  color:#ff1493;
+
+  text-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #ffd700;
+}
+
+.details{
+
+  font-size:1.8em;
+
+  color:#ffffff;
+
+  font-weight:bold;
+
+  line-height:1.7;
+
+  text-shadow:
+    2px 2px 8px black;
+}
+
+.venue{
+
+  font-size:2em;
+
+  color:#fff8dc;
+
+  margin-top:30px;
+
+  text-shadow:
+    2px 2px 10px black;
+}
+
+.location-btn{
+
+  display:inline-block;
+
+  margin-top:25px;
+
+  padding:16px 34px;
+
+  background:linear-gradient(
+    135deg,
+    #ff1493,
+    #ff69b4
+  );
+
+  color:white;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-size:1.3em;
+
+  font-weight:bold;
+}
+
+#countdown{
+
+  margin-top:35px;
+
+  font-size:2em;
+
+  color:#ffe600;
+
+  font-weight:bold;
+
+  line-height:2;
+
+  text-shadow:
+    2px 2px 10px black;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes glowText{
+
+  from{
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff6699,
+      0 0 30px gold;
+  }
+
+  to{
+    text-shadow:
+      0 0 20px #fff,
+      0 0 40px #ff3366,
+      0 0 60px gold;
+  }
+}
+
+@keyframes pulseGlow{
+
+  0%{ transform:scale(1); }
+
+  50%{ transform:scale(1.08); }
+
+  100%{ transform:scale(1); }
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes sparkleMove{
+
+  from{ background-position:0 0; }
+
+  to{ background-position:200px 200px; }
+}
+
+@keyframes zoomGlow{
+
+  from{ transform:scale(1); }
+
+  to{ transform:scale(1.08); }
+}
+
+@keyframes floatText{
+
+  0%{ transform:translateY(0px); }
+
+  50%{ transform:translateY(-10px); }
+
+  100%{ transform:translateY(0px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+  <h2>Tap to Reveal</h2>
+
+  <button class="button" onclick="openInvitation()">
+    H ♥ S
+  </button>
+
+  <h1>
+    We can’t wait to share our happiest moment with you!
+  </h1>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+  <h1>
+
+    <span class="name">Saro</span>
+
+    <span class="weds">weds</span>
+
+    <span class="name">Hema</span>
+
+  </h1>
+
+  <p>
+    With the blessings of our families and the joy in our hearts,
+    we are excited to begin our forever together.
+  </p>
+
+  <div class="scroll-down">
+    Scroll Down ↓
+  </div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div id="page3" class="page">
+
+  <h2>
+    Scratch Here to Reveal Our Big Day 💖
+  </h2>
+
+  <div id="scratchCard">
+
+    <div id="weddingDate">
+
+      <div class="date-content">
+        💍<br>
+        June 25, 2026
+      </div>
+
+    </div>
+
+    <canvas id="scratchCanvas"
+            width="300"
+            height="270"></canvas>
+
+  </div>
+
+  <div class="invite-note">
+
+    <h3>
+      💖 A Sweet Invitation 💖
+    </h3>
+
+    <p>
+      Two hearts are becoming one,
+      and our happiest chapter begins with love, laughter,
+      and the blessings of our dear family and friends.
+    </p>
+
+    <p>
+      Your presence on our special day will make our celebration
+      even more beautiful and memorable.
+    </p>
+
+    <p>
+      Thank you for your endless love,
+      warm wishes, and blessings as we begin our forever together.
+    </p>
+
+    <h4>
+      With Love,<br>
+      Hema & Saro 💍
+    </h4>
+
+  </div>
+
+  <div class="scroll-down">
+    Scroll Down ↓
+  </div>
+
+</div>
+
+<!-- PAGE 4 -->
+
+<div id="page4" class="page">
+
+  <h2 class="animated-title">
+    ✨ Reception ✨
+  </h2>
+
+  <p class="details">
+    🗓️ June 24, 2026<br>
+    ⏰ 7:00 PM onwards
+  </p>
+
+  <h2 class="animated-title">
+    ✨ Muhurtham ✨
+  </h2>
+
+  <p class="details">
+    🗓️ June 25, 2026<br>
+    ⏰ 7:30 AM – 9:00 AM
+  </p>
+
+  <p class="venue">
+    📍 PMS Salammmal Kalyana Mandapam
+  </p>
+
+  <!-- LOCATION -->
+
+  <a href="https://share.google/3HJIvfWUkpv1AhQ7T"
+     target="_blank"
+     class="location-btn">
+
+     📍 View Location
+
+  </a>
+
+  <!-- COUNTDOWN -->
+
+  <div id="countdown">
+
+    <div>
+      💖 Reception Countdown 💖
+      <br><br>
+      <span id="receptionTimer"></span>
+    </div>
+
+    <br><br>
+
+    <div>
+      💍 Wedding Countdown 💍
+      <br><br>
+      <span id="weddingTimer"></span>
+    </div>
+
+  </div>
+
+  <!-- SAVE DATE -->
+
+  <div style="margin-top:50px;">
+
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z&details=Reception:+June+24+2026+7PM+onwards%0AWedding:+June+25+2026+7:30AM+-+9:00AM%0A%0AVenue:+PMS+Salammmal+Kalyana+Mandapam&location=PMS+Salammmal+Kalyana+Mandapam"
+       target="_blank"
+       class="location-btn">
+
+       💖 Save The Date 💖
+
+    </a>
+
+  </div>
+
+  <!-- THANK YOU -->
+
+  <div style="
+  margin-top:70px;
+  font-family:'Great Vibes',cursive;
+  font-size:3em;
+  color:#fff;
+  text-shadow:
+  0 0 10px #ff99cc,
+  0 0 20px gold;
+  animation:glowText 2s infinite alternate;
+  ">
+
+    Thank You For Celebrating With Us 💖
+
+  </div>
+
+</div>
+
+<script>
+
+/* START FROM PAGE 1 */
+
+window.onload = function(){
+
+  window.scrollTo(0,0);
+
+  document.getElementById("page1").style.display = "flex";
+  document.getElementById("page2").style.display = "none";
+
+  initScratchCard();
+  startCountdown();
+};
+
+/* OPEN INVITATION */
+
+function openInvitation(){
+
+  document.getElementById("page1").style.display = "none";
+
+  document.getElementById("page2").style.display = "flex";
+
+  document.getElementById("page2").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+/* SCRATCH CARD */
+
+function initScratchCard(){
+
+  const canvas = document.getElementById("scratchCanvas");
+
+  const ctx = canvas.getContext("2d");
+
+  const weddingDate = document.getElementById("weddingDate");
+
+  function drawHeart(){
+
+    ctx.fillStyle = "#9b0000";
+
+    ctx.beginPath();
+
+    ctx.moveTo(150,240);
+
+    ctx.bezierCurveTo(150,210,60,170,60,95);
+    ctx.bezierCurveTo(60,40,120,40,150,90);
+    ctx.bezierCurveTo(180,40,240,40,240,95);
+    ctx.bezierCurveTo(240,170,150,210,150,240);
+
+    ctx.closePath();
+
+    ctx.fill();
+  }
+
+  drawHeart();
+
+  let isDrawing = false;
+
+  function scratch(x,y){
+
+    ctx.globalCompositeOperation = "destination-out";
+
+    ctx.beginPath();
+
+    ctx.arc(x,y,20,0,Math.PI*2);
+
+    ctx.fill();
+
+    revealDate();
+  }
+
+  function revealDate(){
+
+    const imageData = ctx.getImageData(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+    let transparent = 0;
+
+    for(let i=3;i<imageData.data.length;i+=4){
+
+      if(imageData.data[i] === 0){
+        transparent++;
+      }
+    }
+
+    const percent =
+      transparent / (canvas.width * canvas.height);
+
+    if(percent > 0.30){
+
+      weddingDate.classList.add("show");
+    }
+  }
+
+  canvas.addEventListener("mousedown",()=>{
+    isDrawing = true;
+  });
+
+  canvas.addEventListener("mouseup",()=>{
+    isDrawing = false;
+  });
+
+  canvas.addEventListener("mousemove",(e)=>{
+
+    if(!isDrawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+
+    scratch(
+      e.clientX - rect.left,
+      e.clientY - rect.top
+    );
+  });
+
+  /* MOBILE */
+
+  canvas.addEventListener("touchstart",()=>{
+    isDrawing = true;
+  });
+
+  canvas.addEventListener("touchend",()=>{
+    isDrawing = false;
+  });
+
+  canvas.addEventListener("touchmove",(e)=>{
+
+    e.preventDefault();
+
+    if(!isDrawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+
+    const touch = e.touches[0];
+
+    scratch(
+      touch.clientX - rect.left,
+      touch.clientY - rect.top
+    );
+
+  },{passive:false});
+}
+
+/* COUNTDOWN */
+
+function updateCountdown(targetDate,elementId){
+
+  const now = new Date().getTime();
+
+  const distance = targetDate - now;
+
+  if(distance < 0){
+
+    document.getElementById(elementId).innerHTML =
+    "It's Today 💖";
+
+    return;
+  }
+
+  const days =
+  Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours =
+  Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+  );
+
+  const minutes =
+  Math.floor(
+    (distance % (1000 * 60 * 60))
+    / (1000 * 60)
+  );
+
+  const seconds =
+  Math.floor(
+    (distance % (1000 * 60))
+    / 1000
+  );
+
+  document.getElementById(elementId).innerHTML =
+    days + "d " +
+    hours + "h " +
+    minutes + "m " +
+    seconds + "s";
+}
+
+function startCountdown(){
+
+  updateCountdown(
+    new Date("2026-06-24T19:00:00").getTime(),
+    "receptionTimer"
+  );
+
+  updateCountdown(
+    new Date("2026-06-25T07:30:00").getTime(),
+    "weddingTimer"
+  );
+
+  setInterval(function(){
+
+    updateCountdown(
+      new Date("2026-06-24T19:00:00").getTime(),
+      "receptionTimer"
+    );
+
+    updateCountdown(
+      new Date("2026-06-25T07:30:00").getTime(),
+      "weddingTimer"
+    );
+
+  },1000);
+}
+
+</script>
+
+</body>
+</html>
