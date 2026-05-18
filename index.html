@@ -28,9 +28,7 @@ body{
   position:relative;
 }
 
-/* =========================================================
-   SCROLL DOWN
-========================================================= */
+/* ================= SCROLL ================= */
 
 .scroll-down{
   position:absolute;
@@ -39,7 +37,7 @@ body{
   transform:translateX(-50%);
   font-family:'Great Vibes',cursive;
   font-size:2em;
-  color:#ffffff;
+  color:#fff;
   text-shadow:0 0 10px #ff99cc,0 0 20px gold;
   animation:scrollBounce 1.8s infinite;
   z-index:20;
@@ -51,9 +49,7 @@ body{
   100%{transform:translateX(-50%) translateY(0);opacity:0.5;}
 }
 
-/* =========================================================
-   PAGE 1
-========================================================= */
+/* ================= PAGE 1 ================= */
 
 #page1{
   background:url('sh2.png') center/cover no-repeat;
@@ -65,31 +61,14 @@ body{
   overflow:hidden;
 }
 
-#page1::before{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:radial-gradient(circle, rgba(255,215,0,0.4) 2px, transparent 3px);
-  background-size:40px 40px;
-  animation:sparkleMove 15s linear infinite;
-  opacity:0.7;
-}
-
 #page1 h2{
-  position:relative;
-  z-index:2;
   font-family:'Great Vibes',cursive;
   font-size:4em;
   color:#ffcc33;
-  margin-bottom:25px;
   text-shadow:0 0 10px #fff,0 0 20px #ff6699,0 0 40px gold;
-  animation:glowText 2s infinite alternate;
 }
 
 #page1 .button{
-  position:relative;
-  z-index:2;
   background:linear-gradient(145deg,#ff3366,#ff6699);
   color:white;
   border:4px solid #ffd700;
@@ -97,85 +76,53 @@ body{
   width:120px;
   height:120px;
   font-size:2em;
-  font-weight:bold;
   cursor:pointer;
-  margin-bottom:35px;
   box-shadow:0 0 20px #ff99cc,0 0 40px gold;
-  animation:pulseGlow 2s infinite;
 }
 
-#page1 h1{
-  position:relative;
-  z-index:2;
-  font-size:2em;
-  line-height:1.5;
-  padding:0 40px;
-  max-width:900px;
-  color:#b22222;
-  font-weight:bold;
-  text-shadow:0 0 10px #fff,0 0 20px #ffd700;
-  animation:fadeUp 2s ease;
-}
-
-/* =========================================================
-   PAGE 2 (FIXED)
-========================================================= */
+/* ================= PAGE 2 (UPDATED) ================= */
 
 #page2{
-
   background:url('image1sh1.png') center/cover no-repeat;
-
   display:none;
-
   flex-direction:column;
   align-items:center;
+  justify-content:center; /* CENTER EVERYTHING */
   text-align:center;
-
   padding:60px 20px;
-
   min-height:100vh;
-
-  justify-content:space-between; /* ⭐ KEY FIX */
 }
 
-#page2 h1{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-}
-
+/* BIG NAME */
 #page2 .name{
   font-family:'Great Vibes',cursive;
-  font-size:5em;
+  font-size:6.8em;   /* increased */
   color:#111;
   text-shadow:0 0 10px gold,0 0 20px #ffd700,0 0 40px #fff0b3;
   animation:zoomGlow 3s infinite alternate;
 }
 
+/* WEDS */
 #page2 .weds{
-  font-family:'Playfair Display',serif;
-  font-size:1.2em;
+  font-size:1.8em;
   font-style:italic;
   color:#222;
-  margin-top:25px;
   text-shadow:0 0 10px gold;
 }
 
+/* CENTER PARAGRAPH */
 #page2 p{
-  font-size:1.3em;
+  font-size:1.6em;
   color:black;
   font-style:italic;
-  line-height:1.8;
-  margin:0;
+  line-height:1.9;
+  max-width:850px;
+  margin-top:30px;
   text-shadow:0 0 10px gold;
   animation:floatText 4s ease-in-out infinite;
-  max-width:800px;
 }
 
-/* =========================================================
-   PAGE 3
-========================================================= */
+/* ================= PAGE 3 ================= */
 
 #page3{
   background:url('sh3.png') center top/cover no-repeat;
@@ -183,87 +130,7 @@ body{
   padding:40px 20px 120px;
 }
 
-#page3 h2{
-  color:white;
-  font-size:2.2em;
-  font-family:'Great Vibes',cursive;
-  text-shadow:0 0 15px #ff99cc,0 0 25px gold;
-}
-
-#scratchCard{
-  position:relative;
-  width:300px;
-  height:270px;
-  margin:15cm auto 0;
-}
-
-#weddingDate{
-  position:absolute;
-  top:0;
-  left:0;
-  width:300px;
-  height:270px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:1;
-  opacity:0;
-  transition:opacity 0.8s ease;
-}
-
-#weddingDate.show{opacity:1;}
-
-.date-content{
-  width:190px;
-  height:190px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  font-size:2em;
-  font-family:'Great Vibes',cursive;
-  color:#ffd700;
-  text-shadow:0 0 10px #fff,0 0 25px gold;
-}
-
-#scratchCanvas{
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:2;
-}
-
-/* PAGE 4 unchanged */
-
-#page4{
-  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('sh44.png') center/cover no-repeat;
-  text-align:center;
-  padding:40px 20px 120px;
-}
-
-/* ANIMATIONS */
-
-@keyframes glowText{
-  from{ text-shadow:0 0 10px #fff,0 0 20px #ff6699,0 0 30px gold;}
-  to{ text-shadow:0 0 20px #fff,0 0 40px #ff3366,0 0 60px gold;}
-}
-
-@keyframes pulseGlow{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.08);}
-  100%{transform:scale(1);}
-}
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes sparkleMove{
-  from{background-position:0 0;}
-  to{background-position:200px 200px;}
-}
+/* ================= ANIMATIONS ================= */
 
 @keyframes zoomGlow{
   from{transform:scale(1);}
@@ -276,6 +143,12 @@ body{
   100%{transform:translateY(0);}
 }
 
+@keyframes scrollBounce{
+  0%{transform:translateX(-50%) translateY(0);opacity:0.5;}
+  50%{transform:translateX(-50%) translateY(10px);opacity:1;}
+  100%{transform:translateX(-50%) translateY(0);opacity:0.5;}
+}
+
 </style>
 </head>
 
@@ -285,19 +158,16 @@ body{
 <div id="page1" class="page">
   <h2>Tap to Reveal</h2>
   <button class="button" onclick="openInvitation()">H ♥ S</button>
-  <h1>We can’t wait to share our happiest moment with you!</h1>
 </div>
 
 <!-- PAGE 2 -->
 <div id="page2" class="page">
 
-  <div>
-    <h1>
-      <span class="name">Saro</span> <h1>
-    <h2>  <span class="weds">weds</span> <h2>
-     <h3> <span class="name">Hema</span>
-    </h3>
-  </div>
+  <h1>
+    <span class="name">Saro</span>
+    <span class="weds">weds</span>
+    <span class="name">Hema</span>
+  </h1>
 
   <p>
     With the blessings of our families and the joy in our hearts,
@@ -305,18 +175,9 @@ body{
   </p>
 
   <div class="scroll-down">Scroll Down ↓</div>
-
 </div>
 
-<!-- PAGE 3 and PAGE 4 remain SAME as your original code -->
-
 <script>
-
-window.onload = function(){
-  window.scrollTo(0,0);
-  document.getElementById("page1").style.display = "flex";
-  document.getElementById("page2").style.display = "none";
-};
 
 function openInvitation(){
   document.getElementById("page1").style.display = "none";
