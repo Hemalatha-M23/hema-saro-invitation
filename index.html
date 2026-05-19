@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Hema ♥ Saro Wedding Invitation</title>
@@ -11,7 +13,13 @@
 
 <style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
 }
 
@@ -20,7 +28,6 @@ html{
 }
 
 body{
-  margin:0;
   overflow-x:hidden;
   font-family:'Playfair Display',serif;
   background:black;
@@ -30,11 +37,6 @@ body{
   min-height:100vh;
   width:100%;
   position:relative;
-}
-
-#page1,
-#page2{
-  will-change:transform, opacity;
 }
 
 /* =========================================================
@@ -55,15 +57,15 @@ body{
 
   font-size:2em;
 
-  color:#ffffff;
+  color:white;
 
   text-shadow:
-    0 0 6px #ff99cc,
-    0 0 12px gold;
+    0 0 10px #ff99cc,
+    0 0 20px gold;
 
   animation:scrollBounce 1.8s infinite;
 
-  z-index:20;
+  z-index:50;
 }
 
 @keyframes scrollBounce{
@@ -96,6 +98,7 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
+
   text-align:center;
 
   overflow:hidden;
@@ -111,14 +114,18 @@ body{
   height:100%;
 
   background:
-  radial-gradient(circle, rgba(255,215,0,0.25) 2px, transparent 3px);
+  radial-gradient(circle,
+  rgba(255,215,0,0.25) 2px,
+  transparent 3px);
 
   background-size:40px 40px;
 
   animation:sparkleMove 15s linear infinite;
 
-  opacity:0.5;
+  opacity:0.45;
 }
+
+/* UPDATED TAP TO REVEAL */
 
 #page1 h2{
 
@@ -129,33 +136,32 @@ body{
 
   font-size:4em;
 
-  color:#ffcc33;
+  color:#ffffff;
 
   margin-bottom:25px;
 
   text-shadow:
-    0 0 4px #fff,
-    0 0 8px #ff99cc,
-    0 0 12px gold;
-
-  animation:glowText 2s infinite alternate;
+    0 0 6px #ff69b4,
+    0 0 12px #ff1493,
+    0 0 20px #ff69b4;
 }
 
-#page1 .button{
+.button{
 
   position:relative;
   z-index:2;
 
-  background:linear-gradient(145deg,#ff3366,#ff6699);
-
-  color:white;
-
-  border:4px solid #ffd700;
+  width:130px;
+  height:130px;
 
   border-radius:50%;
 
-  width:120px;
-  height:120px;
+  border:4px solid gold;
+
+  background:
+  linear-gradient(145deg,#ff3366,#ff6699);
+
+  color:white;
 
   font-size:2em;
   font-weight:bold;
@@ -165,8 +171,8 @@ body{
   margin-bottom:35px;
 
   box-shadow:
-    0 0 15px #ff99cc,
-    0 0 25px gold;
+    0 0 20px #ff99cc,
+    0 0 30px gold;
 
   animation:pulseGlow 2s infinite;
 }
@@ -178,21 +184,17 @@ body{
 
   font-size:2em;
 
-  line-height:1.5;
-
-  padding:0 40px;
+  color:#b22222;
 
   max-width:900px;
 
-  color:#b22222;
+  line-height:1.5;
 
-  font-weight:bold;
+  padding:0 30px;
 
   text-shadow:
-    0 0 6px #fff,
-    0 0 12px #ffd700;
-
-  animation:fadeUp 2s ease;
+    0 0 5px white,
+    0 0 10px gold;
 }
 
 /* =========================================================
@@ -206,14 +208,15 @@ body{
   display:none;
 
   flex-direction:column;
-  align-items:center;
   justify-content:center;
+  align-items:center;
+
   text-align:center;
 
   padding:45vh 20px 100px;
 }
 
-#page2 .name{
+.name{
 
   font-family:'Great Vibes',cursive;
 
@@ -222,46 +225,37 @@ body{
   color:#111;
 
   text-shadow:
-    0 0 6px gold,
-    0 0 12px #ffd700;
+    0 0 8px gold,
+    0 0 16px #ffd700;
 
   animation:zoomGlow 3s infinite alternate;
 }
 
-#page2 .weds{
-
-  font-family:'Playfair Display',serif;
+.weds{
 
   font-size:1.5em;
 
   font-style:italic;
 
-  color:#222;
-
   margin-top:10px;
 
-  text-shadow:
-    0 0 6px gold;
+  color:#222;
 }
 
 #page2 p{
 
-  font-size:1.5em;
-
-  color:black;
-
-  font-style:italic;
-
-  line-height:1.8;
-
-  margin:25px 20px;
+  margin-top:25px;
 
   max-width:800px;
 
+  font-size:1.5em;
+
+  line-height:1.8;
+
+  color:black;
+
   text-shadow:
     0 0 6px gold;
-
-  animation:floatText 4s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -275,19 +269,23 @@ body{
   text-align:center;
 
   padding:40px 20px 120px;
+
+  position:relative;
 }
 
-#page3 h2{
+.scratch-title{
 
   color:white;
 
-  font-size:2.5em;
+  font-size:2.7em;
 
   font-family:'Great Vibes',cursive;
 
   text-shadow:
-    0 0 8px #ff99cc,
-    0 0 14px gold;
+    0 0 10px #ff99cc,
+    0 0 20px gold;
+
+  margin-top:20px;
 }
 
 #scratchCard{
@@ -297,10 +295,9 @@ body{
   width:300px;
   height:270px;
 
-  margin-left:auto;
-  margin-right:auto;
+  margin:auto;
 
-  margin-top:180px;
+  margin-top:70px;
 }
 
 #weddingDate{
@@ -325,6 +322,8 @@ body{
   width:190px;
   height:190px;
 
+  border-radius:50%;
+
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -332,19 +331,43 @@ body{
 
   text-align:center;
 
-  border-radius:50%;
+  background:
+  rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(6px);
+
+  border:
+  3px solid rgba(255,215,0,0.5);
+
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.4);
+
+  padding:15px;
+}
+
+.ring{
+
+  font-size:2.5em;
+
+  margin-bottom:10px;
+}
+
+.date-text{
 
   font-size:2em;
 
-  line-height:1.5;
+  font-weight:bold;
 
-  font-family:'Great Vibes',cursive;
+  line-height:1.4;
 
   color:#ffd700;
 
+  letter-spacing:1px;
+
   text-shadow:
-    0 0 6px #fff,
-    0 0 12px gold;
+    0 0 10px white,
+    0 0 20px gold,
+    0 0 35px #ff99cc;
 }
 
 #scratchCanvas{
@@ -359,47 +382,69 @@ body{
 
 .invite-note{
 
-  margin-top:120px;
+  margin-top:90px;
 
-  padding:25px;
-
-  background:rgba(255,255,255,0.12);
-
-  border-radius:30px;
-
-  backdrop-filter:blur(6px);
-
-  max-width:700px;
+  max-width:720px;
 
   margin-left:auto;
   margin-right:auto;
+
+  padding:28px;
+
+  border-radius:35px;
+
+  background:
+  rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(8px);
+
+  border:
+  1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.25);
 }
 
 .invite-note h3{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:2.5em;
+  font-size:2.8em;
 
   color:#ffd700;
+
+  margin-bottom:20px;
+
+  text-shadow:
+    0 0 10px gold;
 }
 
 .invite-note p{
 
+  color:white;
+
   font-size:1.2em;
 
-  line-height:1.9;
+  line-height:2;
 
-  color:white;
+  margin-bottom:18px;
+
+  text-shadow:
+    0 0 5px rgba(0,0,0,0.5);
 }
 
 .invite-note h4{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:2.2em;
+  font-size:2.3em;
 
   color:#ffccdd;
+
+  margin-top:20px;
+
+  text-shadow:
+    0 0 10px #ff99cc;
 }
 
 /* =========================================================
@@ -410,8 +455,8 @@ body{
 
   background:
   linear-gradient(
-    rgba(0,0,0,0.20),
-    rgba(0,0,0,0.20)
+  rgba(0,0,0,0.20),
+  rgba(0,0,0,0.20)
   ),
   url('sh4.png') center/cover no-repeat;
 
@@ -429,19 +474,21 @@ body{
   color:#ff1493;
 
   text-shadow:
-    0 0 6px #ffffff,
-    0 0 12px #ffd700;
+    0 0 10px white,
+    0 0 20px gold;
 }
 
 .details{
 
+  margin-top:15px;
+
   font-size:1.8em;
 
-  color:#ffffff;
+  color:white;
+
+  line-height:1.8;
 
   font-weight:bold;
-
-  line-height:1.7;
 
   text-shadow:
     2px 2px 8px black;
@@ -449,11 +496,11 @@ body{
 
 .venue{
 
+  margin-top:30px;
+
   font-size:2em;
 
   color:#fff8dc;
-
-  margin-top:30px;
 
   text-shadow:
     2px 2px 10px black;
@@ -467,19 +514,20 @@ body{
 
   padding:16px 34px;
 
-  background:linear-gradient(
-    135deg,
-    #ff1493,
-    #ff69b4
-  );
-
-  color:white;
-
   border-radius:50px;
 
   text-decoration:none;
 
-  font-size:1.3em;
+  background:
+  linear-gradient(
+  135deg,
+  #ff1493,
+  #ff69b4
+  );
+
+  color:white;
+
+  font-size:1.2em;
 
   font-weight:bold;
 
@@ -489,7 +537,7 @@ body{
 
 #countdown{
 
-  margin-top:35px;
+  margin-top:40px;
 
   font-size:2em;
 
@@ -503,8 +551,87 @@ body{
     2px 2px 10px black;
 }
 
+.thankyou{
+
+  margin-top:70px;
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:3em;
+
+  color:white;
+
+  text-shadow:
+    0 0 10px #ff99cc,
+    0 0 20px gold;
+}
+
 /* =========================================================
-   MOBILE RESPONSIVE
+   FLOWER EFFECT
+========================================================= */
+
+@keyframes flowerFall{
+
+  0%{
+    opacity:1;
+    transform:
+    translateY(0)
+    scale(1)
+    rotate(0deg);
+  }
+
+  100%{
+    opacity:0;
+    transform:
+    translateY(-60px)
+    scale(1.8)
+    rotate(180deg);
+  }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes pulseGlow{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.06);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+@keyframes sparkleMove{
+
+  from{
+    background-position:0 0;
+  }
+
+  to{
+    background-position:200px 200px;
+  }
+}
+
+@keyframes zoomGlow{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.05);
+  }
+}
+
+/* =========================================================
+   MOBILE
 ========================================================= */
 
 @media(max-width:768px){
@@ -516,30 +643,29 @@ body{
   #page1 h1{
     font-size:1.3em;
     padding:0 20px;
-    line-height:1.6;
+  }
+
+  .name{
+    font-size:3.5em;
   }
 
   #page2{
     padding-top:38vh;
   }
 
-  #page2 .name{
-    font-size:3.5em;
-  }
-
   #page2 p{
-    font-size:1.15em;
-    padding:0 10px;
+    font-size:1.1em;
   }
 
-  #page3 h2{
-    font-size:1.8em;
+  .scratch-title{
+    font-size:2em;
+    line-height:1.4;
   }
 
   #scratchCard{
     width:260px;
     height:230px;
-    margin-top:130px;
+    margin-top:50px;
   }
 
   #scratchCanvas{
@@ -553,27 +679,34 @@ body{
   }
 
   .date-content{
-    width:170px;
-    height:170px;
-    font-size:1.6em;
+    width:165px;
+    height:165px;
+  }
+
+  .ring{
+    font-size:2em;
+  }
+
+  .date-text{
+    font-size:1.45em;
   }
 
   .invite-note{
-    margin-top:80px;
-    padding:20px;
+    margin-top:70px;
+    padding:22px;
   }
 
   .invite-note h3{
-    font-size:2em;
+    font-size:2.2em;
   }
 
   .invite-note p{
     font-size:1.05em;
-    line-height:1.8;
+    line-height:1.9;
   }
 
   .invite-note h4{
-    font-size:1.8em;
+    font-size:1.9em;
   }
 
   .animated-title{
@@ -585,88 +718,21 @@ body{
   }
 
   .venue{
-    font-size:1.4em;
-    line-height:1.6;
-  }
-
-  .location-btn{
-    font-size:1em;
-    padding:14px 24px;
+    font-size:1.5em;
   }
 
   #countdown{
     font-size:1.3em;
   }
 
-}
-
-/* =========================================================
-   ANIMATIONS
-========================================================= */
-
-@keyframes glowText{
-
-  from{
-    text-shadow:
-      0 0 4px #fff,
-      0 0 8px #ff99cc,
-      0 0 12px gold;
+  .thankyou{
+    font-size:2.3em;
   }
 
-  to{
-    text-shadow:
-      0 0 8px #fff,
-      0 0 14px #ff6699,
-      0 0 20px gold;
-  }
-}
-
-@keyframes pulseGlow{
-
-  0%{ transform:scale(1); }
-
-  50%{ transform:scale(1.06); }
-
-  100%{ transform:scale(1); }
-}
-
-@keyframes fadeUp{
-
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes sparkleMove{
-
-  from{ background-position:0 0; }
-
-  to{ background-position:200px 200px; }
-}
-
-@keyframes zoomGlow{
-
-  from{ transform:scale(1); }
-
-  to{ transform:scale(1.05); }
-}
-
-@keyframes floatText{
-
-  0%{ transform:translateY(0px); }
-
-  50%{ transform:translateY(-8px); }
-
-  100%{ transform:translateY(0px); }
 }
 
 </style>
+
 </head>
 
 <body>
@@ -677,8 +743,11 @@ body{
 
   <h2>Tap to Reveal</h2>
 
-  <button class="button" onclick="openInvitation()">
+  <button class="button"
+          onclick="openInvitation()">
+
     H ♥ S
+
   </button>
 
   <h1>
@@ -718,7 +787,7 @@ body{
 
 <div id="page3" class="page">
 
-  <h2>
+  <h2 class="scratch-title">
     Scratch Here to Reveal Our Big Day 💖
   </h2>
 
@@ -727,8 +796,13 @@ body{
     <div id="weddingDate">
 
       <div class="date-content">
-        💍<br>
-        June 25, 2026
+
+        <span class="ring">💍</span>
+
+        <span class="date-text">
+          JUNE 25, 2026
+        </span>
+
       </div>
 
     </div>
@@ -747,18 +821,20 @@ body{
 
     <p>
       Two hearts are becoming one,
-      and our happiest chapter begins with love, laughter,
-      and the blessings of our dear family and friends.
+      and our beautiful forever begins with
+      love, laughter, happiness and blessings.
     </p>
 
     <p>
-      Your presence on our special day will make our celebration
-      even more beautiful and memorable.
+      Your presence on our special day
+      will make our celebration even more
+      memorable and magical.
     </p>
 
     <p>
-      Thank you for your endless love,
-      warm wishes, and blessings as we begin our forever together.
+      We warmly invite you and your family
+      to celebrate our wedding and bless us
+      as we begin this beautiful new chapter together.
     </p>
 
     <h4>
@@ -787,7 +863,8 @@ body{
     ⏰ 7:00 PM onwards
   </p>
 
-  <h2 class="animated-title">
+  <h2 class="animated-title"
+      style="margin-top:40px;">
     ✨ Muhurtham ✨
   </h2>
 
@@ -797,7 +874,7 @@ body{
   </p>
 
   <p class="venue">
-    📍 PMS Salammal Kalyana Mandapam
+    📍 PMS Salammmal Kalyana Mandapam
   </p>
 
   <a href="https://share.google/3HJIvfWUkpv1AhQ7T"
@@ -828,7 +905,7 @@ body{
 
   <div style="margin-top:50px;">
 
-    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z&details=Reception:+June+24+2026+7PM+onwards%0AWedding:+June+25+2026+7:30AM+-+9:00AM%0A%0AVenue:+PMS+Salammal+Kalyana+Mandapam&location=PMS+Salammal+Kalyana+Mandapam"
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z"
        target="_blank"
        class="location-btn">
 
@@ -838,49 +915,33 @@ body{
 
   </div>
 
-  <div style="
-  margin-top:70px;
-  font-family:'Great Vibes',cursive;
-  font-size:3em;
-  color:#fff;
-  text-shadow:
-  0 0 10px #ff99cc,
-  0 0 20px gold;
-  animation:glowText 2s infinite alternate;
-  ">
-
+  <div class="thankyou">
     Thank You For Celebrating With Us 💖
-
   </div>
 
 </div>
 
 <script>
 
-window.onload = function(){
-
-  window.scrollTo(0,0);
-
-  document.getElementById("page1").style.display = "flex";
-  document.getElementById("page2").style.display = "none";
-
-  initScratchCard();
-  startCountdown();
-};
-
-/* PAGE TRANSITION */
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
 
 function openInvitation(){
 
-  const page1 = document.getElementById("page1");
-  const page2 = document.getElementById("page2");
+  const page1 =
+  document.getElementById("page1");
+
+  const page2 =
+  document.getElementById("page2");
 
   page1.style.transition =
-  "opacity 1.2s ease, transform 1.2s ease";
+  "all 1.2s ease";
 
   page1.style.opacity = "0";
 
-  page1.style.transform = "scale(1.08)";
+  page1.style.transform =
+  "scale(1.1)";
 
   setTimeout(function(){
 
@@ -891,47 +952,47 @@ function openInvitation(){
     page2.style.opacity = "0";
 
     page2.style.transform =
-    "translateY(80px) scale(0.96)";
+    "translateY(60px)";
 
     page2.style.transition =
-    "all 1.4s ease";
+    "all 1.2s ease";
 
     setTimeout(function(){
 
       page2.style.opacity = "1";
 
       page2.style.transform =
-      "translateY(0) scale(1)";
+      "translateY(0)";
 
     },100);
-
-    page2.scrollIntoView({
-      behavior:"smooth"
-    });
 
   },1200);
 }
 
-/* SCRATCH CARD */
+/* =========================================================
+   SCRATCH CARD
+========================================================= */
 
 function initScratchCard(){
 
-  const canvas = document.getElementById("scratchCanvas");
+  const canvas =
+  document.getElementById("scratchCanvas");
 
-  const ctx = canvas.getContext("2d");
+  const ctx =
+  canvas.getContext("2d");
 
   function drawHeart(){
 
-    ctx.fillStyle = "#9b0000";
+    ctx.fillStyle = "#a00000";
 
     ctx.beginPath();
 
-    ctx.moveTo(150,220);
+    ctx.moveTo(150,230);
 
     ctx.bezierCurveTo(150,210,60,170,60,95);
     ctx.bezierCurveTo(60,40,120,40,150,90);
     ctx.bezierCurveTo(180,40,240,40,240,95);
-    ctx.bezierCurveTo(240,170,150,210,150,220);
+    ctx.bezierCurveTo(240,170,150,210,150,230);
 
     ctx.closePath();
 
@@ -942,15 +1003,52 @@ function initScratchCard(){
 
   let isDrawing = false;
 
+  function createFlower(x,y){
+
+    const flower =
+    document.createElement("div");
+
+    flower.innerHTML =
+    ["🌸","🌺","💮","🌼"]
+    [Math.floor(Math.random()*4)];
+
+    flower.style.position = "absolute";
+
+    flower.style.left = x + "px";
+
+    flower.style.top = y + "px";
+
+    flower.style.fontSize =
+    (18 + Math.random()*10) + "px";
+
+    flower.style.pointerEvents =
+    "none";
+
+    flower.style.zIndex = "50";
+
+    flower.style.animation =
+    "flowerFall 1.2s ease-out forwards";
+
+    document.getElementById("scratchCard")
+    .appendChild(flower);
+
+    setTimeout(()=>{
+      flower.remove();
+    },1200);
+  }
+
   function scratch(x,y){
 
-    ctx.globalCompositeOperation = "destination-out";
+    ctx.globalCompositeOperation =
+    "destination-out";
 
     ctx.beginPath();
 
-    ctx.arc(x,y,28,0,Math.PI*2);
+    ctx.arc(x,y,30,0,Math.PI*2);
 
     ctx.fill();
+
+    createFlower(x,y);
   }
 
   canvas.addEventListener("mousedown",()=>{
@@ -965,7 +1063,8 @@ function initScratchCard(){
 
     if(!isDrawing) return;
 
-    const rect = canvas.getBoundingClientRect();
+    const rect =
+    canvas.getBoundingClientRect();
 
     scratch(
       e.clientX - rect.left,
@@ -987,7 +1086,8 @@ function initScratchCard(){
 
     if(!isDrawing) return;
 
-    const rect = canvas.getBoundingClientRect();
+    const rect =
+    canvas.getBoundingClientRect();
 
     const touch = e.touches[0];
 
@@ -999,48 +1099,58 @@ function initScratchCard(){
   },{passive:false});
 }
 
-/* COUNTDOWN */
+initScratchCard();
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
 
 function updateCountdown(targetDate,elementId){
 
-  const now = new Date().getTime();
+  const now =
+  new Date().getTime();
 
-  const distance = targetDate - now;
+  const distance =
+  targetDate - now;
 
   if(distance < 0){
 
-    document.getElementById(elementId).innerHTML =
+    document.getElementById(elementId)
+    .innerHTML =
     "It's Today 💖";
 
     return;
   }
 
   const days =
-  Math.floor(distance / (1000 * 60 * 60 * 24));
+  Math.floor(distance /
+  (1000*60*60*24));
 
   const hours =
   Math.floor(
-    (distance % (1000 * 60 * 60 * 24))
-    / (1000 * 60 * 60)
-  );
+  (distance %
+  (1000*60*60*24))
+  /(1000*60*60));
 
   const minutes =
   Math.floor(
-    (distance % (1000 * 60 * 60))
-    / (1000 * 60)
-  );
+  (distance %
+  (1000*60*60))
+  /(1000*60));
 
   const seconds =
   Math.floor(
-    (distance % (1000 * 60))
-    / 1000
-  );
+  (distance %
+  (1000*60))
+  /1000);
 
-  document.getElementById(elementId).innerHTML =
-    days + "d " +
-    hours + "h " +
-    minutes + "m " +
-    seconds + "s";
+  document.getElementById(elementId)
+  .innerHTML =
+
+  days + "d " +
+  hours + "h " +
+  minutes + "m " +
+  seconds + "s";
 }
 
 function startCountdown(){
@@ -1069,6 +1179,8 @@ function startCountdown(){
 
   },1000);
 }
+
+startCountdown();
 
 </script>
 
