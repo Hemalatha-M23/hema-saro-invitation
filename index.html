@@ -11,6 +11,10 @@
 
 <style>
 
+*{
+  box-sizing:border-box;
+}
+
 html{
   scroll-behavior:smooth;
 }
@@ -26,6 +30,11 @@ body{
   min-height:100vh;
   width:100%;
   position:relative;
+}
+
+#page1,
+#page2{
+  will-change:transform, opacity;
 }
 
 /* =========================================================
@@ -49,8 +58,8 @@ body{
   color:#ffffff;
 
   text-shadow:
-    0 0 10px #ff99cc,
-    0 0 20px gold;
+    0 0 6px #ff99cc,
+    0 0 12px gold;
 
   animation:scrollBounce 1.8s infinite;
 
@@ -102,13 +111,13 @@ body{
   height:100%;
 
   background:
-  radial-gradient(circle, rgba(255,215,0,0.4) 2px, transparent 3px);
+  radial-gradient(circle, rgba(255,215,0,0.25) 2px, transparent 3px);
 
   background-size:40px 40px;
 
   animation:sparkleMove 15s linear infinite;
 
-  opacity:0.7;
+  opacity:0.5;
 }
 
 #page1 h2{
@@ -125,9 +134,9 @@ body{
   margin-bottom:25px;
 
   text-shadow:
-    0 0 10px #fff,
-    0 0 20px #ff6699,
-    0 0 40px gold;
+    0 0 4px #fff,
+    0 0 8px #ff99cc,
+    0 0 12px gold;
 
   animation:glowText 2s infinite alternate;
 }
@@ -156,8 +165,8 @@ body{
   margin-bottom:35px;
 
   box-shadow:
-    0 0 20px #ff99cc,
-    0 0 40px gold;
+    0 0 15px #ff99cc,
+    0 0 25px gold;
 
   animation:pulseGlow 2s infinite;
 }
@@ -180,8 +189,8 @@ body{
   font-weight:bold;
 
   text-shadow:
-    0 0 10px #fff,
-    0 0 20px #ffd700;
+    0 0 6px #fff,
+    0 0 12px #ffd700;
 
   animation:fadeUp 2s ease;
 }
@@ -198,18 +207,10 @@ body{
 
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   text-align:center;
 
-  padding-top:15cm;
-}
-
-#page2 h1{
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  gap:15px;
+  padding:45vh 20px 100px;
 }
 
 #page2 .name{
@@ -221,9 +222,8 @@ body{
   color:#111;
 
   text-shadow:
-    0 0 10px gold,
-    0 0 20px #ffd700,
-    0 0 40px #fff0b3;
+    0 0 6px gold,
+    0 0 12px #ffd700;
 
   animation:zoomGlow 3s infinite alternate;
 }
@@ -232,21 +232,21 @@ body{
 
   font-family:'Playfair Display',serif;
 
-  font-size:1.2em;
+  font-size:1.5em;
 
   font-style:italic;
 
   color:#222;
 
-  margin-top:25px;
+  margin-top:10px;
 
   text-shadow:
-    0 0 10px gold;
+    0 0 6px gold;
 }
 
 #page2 p{
 
-  font-size:1.3em;
+  font-size:1.5em;
 
   color:black;
 
@@ -256,8 +256,10 @@ body{
 
   margin:25px 20px;
 
+  max-width:800px;
+
   text-shadow:
-    0 0 10px gold;
+    0 0 6px gold;
 
   animation:floatText 4s ease-in-out infinite;
 }
@@ -279,13 +281,13 @@ body{
 
   color:white;
 
-  font-size:2.2em;
+  font-size:2.5em;
 
   font-family:'Great Vibes',cursive;
 
   text-shadow:
-    0 0 15px #ff99cc,
-    0 0 25px gold;
+    0 0 8px #ff99cc,
+    0 0 14px gold;
 }
 
 #scratchCard{
@@ -298,7 +300,7 @@ body{
   margin-left:auto;
   margin-right:auto;
 
-  margin-top:15cm;
+  margin-top:180px;
 }
 
 #weddingDate{
@@ -316,14 +318,6 @@ body{
   justify-content:center;
 
   z-index:1;
-
-  opacity:0;
-
-  transition:opacity 0.8s ease;
-}
-
-#weddingDate.show{
-  opacity:1;
 }
 
 .date-content{
@@ -349,8 +343,8 @@ body{
   color:#ffd700;
 
   text-shadow:
-    0 0 10px #fff,
-    0 0 25px gold;
+    0 0 6px #fff,
+    0 0 12px gold;
 }
 
 #scratchCanvas{
@@ -369,7 +363,7 @@ body{
 
   padding:25px;
 
-  background:rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.12);
 
   border-radius:30px;
 
@@ -435,8 +429,8 @@ body{
   color:#ff1493;
 
   text-shadow:
-    0 0 10px #ffffff,
-    0 0 20px #ffd700;
+    0 0 6px #ffffff,
+    0 0 12px #ffd700;
 }
 
 .details{
@@ -488,6 +482,9 @@ body{
   font-size:1.3em;
 
   font-weight:bold;
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.3);
 }
 
 #countdown{
@@ -507,6 +504,103 @@ body{
 }
 
 /* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  #page1 h2{
+    font-size:2.8em;
+  }
+
+  #page1 h1{
+    font-size:1.3em;
+    padding:0 20px;
+    line-height:1.6;
+  }
+
+  #page2{
+    padding-top:38vh;
+  }
+
+  #page2 .name{
+    font-size:3.5em;
+  }
+
+  #page2 p{
+    font-size:1.15em;
+    padding:0 10px;
+  }
+
+  #page3 h2{
+    font-size:1.8em;
+  }
+
+  #scratchCard{
+    width:260px;
+    height:230px;
+    margin-top:130px;
+  }
+
+  #scratchCanvas{
+    width:260px;
+    height:230px;
+  }
+
+  #weddingDate{
+    width:260px;
+    height:230px;
+  }
+
+  .date-content{
+    width:170px;
+    height:170px;
+    font-size:1.6em;
+  }
+
+  .invite-note{
+    margin-top:80px;
+    padding:20px;
+  }
+
+  .invite-note h3{
+    font-size:2em;
+  }
+
+  .invite-note p{
+    font-size:1.05em;
+    line-height:1.8;
+  }
+
+  .invite-note h4{
+    font-size:1.8em;
+  }
+
+  .animated-title{
+    font-size:2.5em;
+  }
+
+  .details{
+    font-size:1.3em;
+  }
+
+  .venue{
+    font-size:1.4em;
+    line-height:1.6;
+  }
+
+  .location-btn{
+    font-size:1em;
+    padding:14px 24px;
+  }
+
+  #countdown{
+    font-size:1.3em;
+  }
+
+}
+
+/* =========================================================
    ANIMATIONS
 ========================================================= */
 
@@ -514,16 +608,16 @@ body{
 
   from{
     text-shadow:
-      0 0 10px #fff,
-      0 0 20px #ff6699,
-      0 0 30px gold;
+      0 0 4px #fff,
+      0 0 8px #ff99cc,
+      0 0 12px gold;
   }
 
   to{
     text-shadow:
-      0 0 20px #fff,
-      0 0 40px #ff3366,
-      0 0 60px gold;
+      0 0 8px #fff,
+      0 0 14px #ff6699,
+      0 0 20px gold;
   }
 }
 
@@ -531,7 +625,7 @@ body{
 
   0%{ transform:scale(1); }
 
-  50%{ transform:scale(1.08); }
+  50%{ transform:scale(1.06); }
 
   100%{ transform:scale(1); }
 }
@@ -560,14 +654,14 @@ body{
 
   from{ transform:scale(1); }
 
-  to{ transform:scale(1.08); }
+  to{ transform:scale(1.05); }
 }
 
 @keyframes floatText{
 
   0%{ transform:translateY(0px); }
 
-  50%{ transform:translateY(-10px); }
+  50%{ transform:translateY(-8px); }
 
   100%{ transform:translateY(0px); }
 }
@@ -598,13 +692,15 @@ body{
 <div id="page2" class="page">
 
   <h1>
+    <span class="name">Saro</span>
+  </h1>
 
-    <span class="name">Saro</span> </h1>
+  <h2>
+    <span class="weds">weds</span>
+  </h2>
 
-  <h2>  <span class="weds">weds</span> </h2>
-
-<h3>    <span class="name">Hema</span>
-
+  <h3>
+    <span class="name">Hema</span>
   </h3>
 
   <p>
@@ -701,10 +797,8 @@ body{
   </p>
 
   <p class="venue">
-    📍 PMS Salammmal Kalyana Mandapam
+    📍 PMS Salammal Kalyana Mandapam
   </p>
-
-  <!-- LOCATION -->
 
   <a href="https://share.google/3HJIvfWUkpv1AhQ7T"
      target="_blank"
@@ -713,8 +807,6 @@ body{
      📍 View Location
 
   </a>
-
-  <!-- COUNTDOWN -->
 
   <div id="countdown">
 
@@ -734,11 +826,9 @@ body{
 
   </div>
 
-  <!-- SAVE DATE -->
-
   <div style="margin-top:50px;">
 
-    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z&details=Reception:+June+24+2026+7PM+onwards%0AWedding:+June+25+2026+7:30AM+-+9:00AM%0A%0AVenue:+PMS+Salammmal+Kalyana+Mandapam&location=PMS+Salammmal+Kalyana+Mandapam"
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z&details=Reception:+June+24+2026+7PM+onwards%0AWedding:+June+25+2026+7:30AM+-+9:00AM%0A%0AVenue:+PMS+Salammal+Kalyana+Mandapam&location=PMS+Salammal+Kalyana+Mandapam"
        target="_blank"
        class="location-btn">
 
@@ -747,8 +837,6 @@ body{
     </a>
 
   </div>
-
-  <!-- THANK YOU -->
 
   <div style="
   margin-top:70px;
@@ -769,8 +857,6 @@ body{
 
 <script>
 
-/* START FROM PAGE 1 */
-
 window.onload = function(){
 
   window.scrollTo(0,0);
@@ -782,17 +868,48 @@ window.onload = function(){
   startCountdown();
 };
 
-/* OPEN INVITATION */
+/* PAGE TRANSITION */
 
 function openInvitation(){
 
-  document.getElementById("page1").style.display = "none";
+  const page1 = document.getElementById("page1");
+  const page2 = document.getElementById("page2");
 
-  document.getElementById("page2").style.display = "flex";
+  page1.style.transition =
+  "opacity 1.2s ease, transform 1.2s ease";
 
-  document.getElementById("page2").scrollIntoView({
-    behavior:"smooth"
-  });
+  page1.style.opacity = "0";
+
+  page1.style.transform = "scale(1.08)";
+
+  setTimeout(function(){
+
+    page1.style.display = "none";
+
+    page2.style.display = "flex";
+
+    page2.style.opacity = "0";
+
+    page2.style.transform =
+    "translateY(80px) scale(0.96)";
+
+    page2.style.transition =
+    "all 1.4s ease";
+
+    setTimeout(function(){
+
+      page2.style.opacity = "1";
+
+      page2.style.transform =
+      "translateY(0) scale(1)";
+
+    },100);
+
+    page2.scrollIntoView({
+      behavior:"smooth"
+    });
+
+  },1200);
 }
 
 /* SCRATCH CARD */
@@ -803,20 +920,18 @@ function initScratchCard(){
 
   const ctx = canvas.getContext("2d");
 
-  const weddingDate = document.getElementById("weddingDate");
-
   function drawHeart(){
 
     ctx.fillStyle = "#9b0000";
 
     ctx.beginPath();
 
-    ctx.moveTo(150,240);
+    ctx.moveTo(150,220);
 
     ctx.bezierCurveTo(150,210,60,170,60,95);
     ctx.bezierCurveTo(60,40,120,40,150,90);
     ctx.bezierCurveTo(180,40,240,40,240,95);
-    ctx.bezierCurveTo(240,170,150,210,150,240);
+    ctx.bezierCurveTo(240,170,150,210,150,220);
 
     ctx.closePath();
 
@@ -833,38 +948,9 @@ function initScratchCard(){
 
     ctx.beginPath();
 
-    ctx.arc(x,y,20,0,Math.PI*2);
+    ctx.arc(x,y,28,0,Math.PI*2);
 
     ctx.fill();
-
-    revealDate();
-  }
-
-  function revealDate(){
-
-    const imageData = ctx.getImageData(
-      0,
-      0,
-      canvas.width,
-      canvas.height
-    );
-
-    let transparent = 0;
-
-    for(let i=3;i<imageData.data.length;i+=4){
-
-      if(imageData.data[i] === 0){
-        transparent++;
-      }
-    }
-
-    const percent =
-      transparent / (canvas.width * canvas.height);
-
-    if(percent > 0.30){
-
-      weddingDate.classList.add("show");
-    }
   }
 
   canvas.addEventListener("mousedown",()=>{
@@ -886,8 +972,6 @@ function initScratchCard(){
       e.clientY - rect.top
     );
   });
-
-  /* MOBILE */
 
   canvas.addEventListener("touchstart",()=>{
     isDrawing = true;
