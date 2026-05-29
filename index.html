@@ -5,11 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Hema ♥ Saro Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet">
 
 <style>
 
@@ -40,49 +42,77 @@ body{
 }
 
 /* =========================================================
-   SCROLL DOWN
+   ANIMATIONS
 ========================================================= */
 
-.scroll-down{
-
-  position:absolute;
-
-  bottom:20px;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  font-family:'Great Vibes',cursive;
-
-  font-size:2em;
-
-  color:white;
-
-  text-shadow:
-    0 0 10px #ff99cc,
-    0 0 20px gold;
-
-  animation:scrollBounce 1.8s infinite;
-
-  z-index:50;
-}
-
-@keyframes scrollBounce{
+@keyframes pulseGlow{
 
   0%{
-    transform:translateX(-50%) translateY(0);
-    opacity:0.5;
+    transform:scale(1);
   }
 
   50%{
-    transform:translateX(-50%) translateY(10px);
-    opacity:1;
+    transform:scale(1.08);
   }
 
   100%{
-    transform:translateX(-50%) translateY(0);
-    opacity:0.5;
+    transform:scale(1);
+  }
+}
+
+@keyframes sparkleMove{
+
+  from{
+    background-position:0 0;
+  }
+
+  to{
+    background-position:200px 200px;
+  }
+}
+
+@keyframes zoomGlow{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.05);
+  }
+}
+
+@keyframes bounce{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+}
+
+@keyframes flowerBurst{
+
+  0%{
+    opacity:1;
+    transform:
+    translate(0,0)
+    scale(1)
+    rotate(0deg);
+  }
+
+  100%{
+    opacity:0;
+    transform:
+    translate(var(--x),var(--y))
+    scale(2)
+    rotate(360deg);
   }
 }
 
@@ -92,7 +122,12 @@ body{
 
 #page1{
 
-  background:url('sh1.png') center/cover no-repeat;
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.35)
+  ),
+  url('sh1.png') center/cover no-repeat;
 
   display:flex;
   flex-direction:column;
@@ -125,36 +160,32 @@ body{
   opacity:0.45;
 }
 
-/* TAP TO REVEAL */
-
-#page1 h2{
+.tap-title{
 
   position:relative;
   z-index:2;
 
   font-family:'Great Vibes',cursive;
 
-  font-size:4em;
+  font-size:4.5em;
 
-  color:#ffffff;
+  color:#FFF4E6;
 
-  margin-bottom:25px;
+  margin-bottom:30px;
 
   text-shadow:
-    0 0 6px #ff69b4,
-    0 0 12px #ff1493,
-    0 0 20px #ff69b4;
+    0 0 8px rgba(255,182,193,0.8),
+    0 0 18px rgba(255,215,0,0.8),
+    2px 2px 8px rgba(0,0,0,0.7);
 }
-
-/* BUTTON */
 
 .button{
 
   position:relative;
   z-index:2;
 
-  width:130px;
-  height:130px;
+  width:140px;
+  height:140px;
 
   border-radius:50%;
 
@@ -165,7 +196,7 @@ body{
 
   color:white;
 
-  font-size:2em;
+  font-size:2.2em;
   font-weight:bold;
 
   cursor:pointer;
@@ -174,29 +205,29 @@ body{
 
   box-shadow:
     0 0 20px #ff99cc,
-    0 0 30px gold;
+    0 0 35px gold;
 
   animation:pulseGlow 2s infinite;
 }
 
-#page1 h1{
+.invite-line{
 
   position:relative;
   z-index:2;
 
   font-size:2em;
 
-  color:#b22222;
+  color:#FFF4E6;
 
   max-width:900px;
 
-  line-height:1.5;
+  line-height:1.6;
 
-  padding:0 30px;
+  padding:0 25px;
 
   text-shadow:
-    0 0 5px white,
-    0 0 10px gold;
+    0 0 10px rgba(255,215,0,0.6),
+    2px 2px 8px rgba(0,0,0,0.7);
 }
 
 /* =========================================================
@@ -215,7 +246,7 @@ body{
 
   text-align:center;
 
-  padding:45vh 20px 100px;
+  padding:42vh 20px 120px;
 }
 
 .name{
@@ -224,46 +255,71 @@ body{
 
   font-size:5em;
 
-  color:#111;
+  color:#FFF4D6;
 
   text-shadow:
-    0 0 8px gold,
-    0 0 16px #ffd700;
+    0 0 8px rgba(255,215,0,0.8),
+    2px 2px 8px rgba(0,0,0,0.85),
+    0 0 20px rgba(255,255,255,0.4);
 
   animation:zoomGlow 3s infinite alternate;
 }
 
 .weds{
 
-  font-size:1.5em;
+  font-size:1.8em;
 
-  font-style:italic;
+  color:#F8E7B5;
 
-  margin-top:10px;
+  margin:10px 0;
 
-  color:#222;
+  text-shadow:
+    2px 2px 6px rgba(0,0,0,0.9),
+    0 0 10px rgba(255,215,0,0.5);
 }
 
-/* INCREASED FONT SIZE */
-
-#page2 p{
+.couple-note{
 
   margin-top:25px;
 
   max-width:850px;
 
-  font-size:1.8em;
+  font-size:1.7em;
 
   line-height:1.9;
 
-  color:black;
+  color:#FFF8EE;
 
   font-weight:bold;
 
   padding:0 20px;
 
   text-shadow:
-    0 0 6px gold;
+    2px 2px 8px rgba(0,0,0,0.95),
+    0 0 8px rgba(255,215,0,0.25);
+}
+
+.scroll-down{
+
+  position:absolute;
+
+  bottom:20px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:2em;
+
+  color:white;
+
+  text-shadow:
+    0 0 10px pink,
+    0 0 20px gold;
+
+  animation:bounce 1.8s infinite;
 }
 
 /* =========================================================
@@ -272,53 +328,42 @@ body{
 
 #page3{
 
-  background:url('sh3.png') center top/cover no-repeat;
+  background:url('sh3.png') center/cover no-repeat;
 
   text-align:center;
 
   padding:40px 20px 120px;
-
-  position:relative;
 }
 
 .scratch-title{
 
-  color:white;
-
-  font-size:2.7em;
-
   font-family:'Great Vibes',cursive;
 
+  font-size:3em;
+
+  color:white;
+
   text-shadow:
-    0 0 10px #ff99cc,
+    0 0 10px pink,
     0 0 20px gold;
-
-  margin-top:20px;
 }
-
-/* SCRATCH CARD MOVED UP */
 
 #scratchCard{
 
   position:relative;
 
-  width:300px;
-  height:270px;
+  width:320px;
+  height:280px;
 
-  margin:auto;
-
-  margin-top:60px;
+  margin:60px auto;
 }
 
 #weddingDate{
 
   position:absolute;
 
-  top:0;
-  left:0;
-
-  width:300px;
-  height:270px;
+  width:100%;
+  height:100%;
 
   display:flex;
   align-items:center;
@@ -329,37 +374,30 @@ body{
 
 .date-content{
 
-  width:190px;
-  height:190px;
+  width:200px;
+  height:200px;
 
   border-radius:50%;
 
+  background:
+  rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(8px);
+
+  border:3px solid rgba(255,215,0,0.6);
+
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
-
-  text-align:center;
-
-  background:
-  rgba(255,255,255,0.08);
-
-  backdrop-filter:blur(6px);
-
-  border:
-  3px solid rgba(255,215,0,0.5);
+  align-items:center;
 
   box-shadow:
-    0 0 20px rgba(255,215,0,0.4);
-
-  padding:15px;
+    0 0 25px rgba(255,215,0,0.5);
 }
 
 .ring{
-
   font-size:2.5em;
-
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .date-text{
@@ -368,16 +406,11 @@ body{
 
   font-weight:bold;
 
-  line-height:1.4;
-
-  color:#ffd700;
-
-  letter-spacing:1px;
+  color:#FFD700;
 
   text-shadow:
     0 0 10px white,
-    0 0 20px gold,
-    0 0 35px #ff99cc;
+    0 0 20px gold;
 }
 
 #scratchCanvas{
@@ -390,18 +423,16 @@ body{
   z-index:2;
 }
 
-/* INVITE NOTE MOVED DOWN */
-
 .invite-note{
 
-  margin-top:150px;
+  margin-top:120px;
 
-  max-width:720px;
+  max-width:760px;
 
   margin-left:auto;
   margin-right:auto;
 
-  padding:28px;
+  padding:30px;
 
   border-radius:35px;
 
@@ -410,53 +441,44 @@ body{
 
   backdrop-filter:blur(8px);
 
-  border:
-  1px solid rgba(255,255,255,0.15);
-
   box-shadow:
-    0 0 20px rgba(0,0,0,0.25);
+    0 0 25px rgba(0,0,0,0.35);
 }
 
 .invite-note h3{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:2.8em;
+  font-size:3em;
 
-  color:#ffd700;
+  color:#FFD700;
 
   margin-bottom:20px;
-
-  text-shadow:
-    0 0 10px gold;
 }
 
 .invite-note p{
 
-  color:white;
-
-  font-size:1.2em;
+  font-size:1.25em;
 
   line-height:2;
 
   margin-bottom:18px;
 
+  color:white;
+
   text-shadow:
-    0 0 5px rgba(0,0,0,0.5);
+    0 0 5px black;
 }
 
 .invite-note h4{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:2.3em;
+  font-size:2.4em;
 
   color:#ffccdd;
 
-  margin-top:20px;
-
-  text-shadow:
-    0 0 10px #ff99cc;
+  margin-top:25px;
 }
 
 /* =========================================================
@@ -467,21 +489,21 @@ body{
 
   background:
   linear-gradient(
-  rgba(0,0,0,0.20),
-  rgba(0,0,0,0.20)
+  rgba(0,0,0,0.25),
+  rgba(0,0,0,0.25)
   ),
   url('sh4.png') center/cover no-repeat;
 
   text-align:center;
 
-  padding:40px 20px 120px;
+  padding:50px 20px 120px;
 }
 
 .animated-title{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:3.5em;
+  font-size:3.8em;
 
   color:#ff1493;
 
@@ -492,27 +514,27 @@ body{
 
 .details{
 
-  margin-top:15px;
+  margin-top:18px;
 
   font-size:1.8em;
-
-  color:white;
 
   line-height:1.8;
 
   font-weight:bold;
 
+  color:white;
+
   text-shadow:
-    2px 2px 8px black;
+    2px 2px 10px black;
 }
 
 .venue{
 
-  margin-top:30px;
+  margin-top:35px;
 
   font-size:2em;
 
-  color:#fff8dc;
+  color:#FFF8DC;
 
   text-shadow:
     2px 2px 10px black;
@@ -524,18 +546,14 @@ body{
 
   margin-top:25px;
 
-  padding:16px 34px;
+  padding:16px 35px;
 
   border-radius:50px;
 
   text-decoration:none;
 
   background:
-  linear-gradient(
-  135deg,
-  #ff1493,
-  #ff69b4
-  );
+  linear-gradient(135deg,#ff1493,#ff69b4);
 
   color:white;
 
@@ -544,20 +562,20 @@ body{
   font-weight:bold;
 
   box-shadow:
-    0 0 10px rgba(255,255,255,0.3);
+    0 0 15px rgba(255,255,255,0.3);
 }
 
 #countdown{
 
-  margin-top:40px;
+  margin-top:50px;
 
   font-size:2em;
 
-  color:#ffe600;
-
-  font-weight:bold;
+  color:#FFE600;
 
   line-height:2;
+
+  font-weight:bold;
 
   text-shadow:
     2px 2px 10px black;
@@ -569,12 +587,12 @@ body{
 
   font-family:'Great Vibes',cursive;
 
-  font-size:3em;
+  font-size:3.2em;
 
   color:white;
 
   text-shadow:
-    0 0 10px #ff99cc,
+    0 0 10px pink,
     0 0 20px gold;
 }
 
@@ -582,150 +600,64 @@ body{
    FLOWER EFFECT
 ========================================================= */
 
-@keyframes flowerFall{
+.burst{
 
-  0%{
-    opacity:1;
-    transform:
-    translateY(0)
-    scale(1)
-    rotate(0deg);
-  }
+  position:absolute;
 
-  100%{
-    opacity:0;
-    transform:
-    translateY(-60px)
-    scale(1.8)
-    rotate(180deg);
-  }
+  pointer-events:none;
+
+  z-index:999;
+
+  animation:flowerBurst 1.5s ease-out forwards;
 }
 
 /* =========================================================
-   ANIMATIONS
-========================================================= */
-
-@keyframes pulseGlow{
-
-  0%{
-    transform:scale(1);
-  }
-
-  50%{
-    transform:scale(1.06);
-  }
-
-  100%{
-    transform:scale(1);
-  }
-}
-
-@keyframes sparkleMove{
-
-  from{
-    background-position:0 0;
-  }
-
-  to{
-    background-position:200px 200px;
-  }
-}
-
-@keyframes zoomGlow{
-
-  from{
-    transform:scale(1);
-  }
-
-  to{
-    transform:scale(1.05);
-  }
-}
-
-/* =========================================================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================================================= */
 
 @media(max-width:768px){
 
-  #page1 h2{
-    font-size:2.8em;
+  .tap-title{
+    font-size:3em;
   }
 
-  #page1 h1{
+  .invite-line{
     font-size:1.3em;
-    padding:0 20px;
   }
 
   .name{
-    font-size:3.5em;
+    font-size:3.7em;
   }
 
-  #page2{
-    padding-top:38vh;
-  }
-
-  #page2 p{
-
-    font-size:1.35em;
-
-    line-height:1.8;
+  .couple-note{
+    font-size:1.3em;
   }
 
   .scratch-title{
-    font-size:2em;
-    line-height:1.4;
-  }
-
-  #scratchCard{
-    width:260px;
-    height:230px;
-    margin-top:45px;
-  }
-
-  #scratchCanvas{
-    width:260px;
-    height:230px;
-  }
-
-  #weddingDate{
-    width:260px;
-    height:230px;
-  }
-
-  .date-content{
-    width:165px;
-    height:165px;
-  }
-
-  .ring{
-    font-size:2em;
-  }
-
-  .date-text{
-    font-size:1.45em;
-  }
-
-  .invite-note{
-    margin-top:120px;
-    padding:22px;
-  }
-
-  .invite-note h3{
     font-size:2.2em;
   }
 
-  .invite-note p{
-    font-size:1.05em;
-    line-height:1.9;
+  #scratchCard{
+    width:280px;
+    height:250px;
   }
 
-  .invite-note h4{
-    font-size:1.9em;
+  #scratchCanvas{
+    width:280px;
+    height:250px;
+  }
+
+  .date-content{
+    width:170px;
+    height:170px;
+  }
+
+  .date-text{
+    font-size:1.5em;
   }
 
   .animated-title{
-    font-size:2.5em;
+    font-size:2.6em;
   }
 
   .details{
@@ -752,13 +684,13 @@ body{
 
 <body>
 
-<!-- =========================================================
-     PAGE 1
-========================================================= -->
+<!-- PAGE 1 -->
 
 <div id="page1" class="page">
 
-  <h2>Tap to Reveal</h2>
+  <h2 class="tap-title">
+    Tap to Reveal
+  </h2>
 
   <button class="button"
           onclick="openInvitation()">
@@ -767,15 +699,13 @@ body{
 
   </button>
 
-  <h1>
+  <h1 class="invite-line">
     We can’t wait to share our happiest moment with you!
   </h1>
 
 </div>
 
-<!-- =========================================================
-     PAGE 2
-========================================================= -->
+<!-- PAGE 2 -->
 
 <div id="page2" class="page">
 
@@ -783,15 +713,15 @@ body{
     <span class="name">Saro</span>
   </h1>
 
-  <h2>
-    <span class="weds">weds</span>
+  <h2 class="weds">
+    weds
   </h2>
 
   <h3>
     <span class="name">Hema</span>
   </h3>
 
-  <p>
+  <p class="couple-note">
     With the blessings of our families and the joy in our hearts,
     we are excited to begin our forever together.
   </p>
@@ -802,9 +732,7 @@ body{
 
 </div>
 
-<!-- =========================================================
-     PAGE 3
-========================================================= -->
+<!-- PAGE 3 -->
 
 <div id="page3" class="page">
 
@@ -829,8 +757,8 @@ body{
     </div>
 
     <canvas id="scratchCanvas"
-            width="300"
-            height="270"></canvas>
+            width="320"
+            height="280"></canvas>
 
   </div>
 
@@ -871,9 +799,7 @@ body{
 
 </div>
 
-<!-- =========================================================
-     PAGE 4
-========================================================= -->
+<!-- PAGE 4 -->
 
 <div id="page4" class="page">
 
@@ -887,7 +813,7 @@ body{
   </p>
 
   <h2 class="animated-title"
-      style="margin-top:40px;">
+      style="margin-top:45px;">
     ✨ Muhurtham ✨
   </h2>
 
@@ -908,25 +834,7 @@ body{
 
   </a>
 
-  <div id="countdown">
-
-    <div>
-      💖 Reception Countdown 💖
-      <br><br>
-      <span id="receptionTimer"></span>
-    </div>
-
-    <br><br>
-
-    <div>
-      💍 Wedding Countdown 💍
-      <br><br>
-      <span id="weddingTimer"></span>
-    </div>
-
-  </div>
-
-  <div style="margin-top:50px;">
+  <div style="margin-top:30px;">
 
     <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hema+%26+Saro+Wedding+Celebration&dates=20260624T133000Z/20260625T033000Z"
        target="_blank"
@@ -938,8 +846,36 @@ body{
 
   </div>
 
+  <div id="countdown">
+
+    <div>
+
+      💖 Reception Countdown 💖
+
+      <br><br>
+
+      <span id="receptionTimer"></span>
+
+    </div>
+
+    <br><br>
+
+    <div>
+
+      💍 Wedding Countdown 💍
+
+      <br><br>
+
+      <span id="weddingTimer"></span>
+
+    </div>
+
+  </div>
+
   <div class="thankyou">
+
     Thank You For Celebrating With Us 💖
+
   </div>
 
 </div>
@@ -1004,60 +940,66 @@ function initScratchCard(){
   const ctx =
   canvas.getContext("2d");
 
-  function drawHeart(){
+  ctx.fillStyle = "#9b0000";
 
-    ctx.fillStyle = "#a00000";
+  ctx.beginPath();
 
-    ctx.beginPath();
+  ctx.moveTo(160,240);
 
-    ctx.moveTo(150,230);
+  ctx.bezierCurveTo(160,220,70,180,70,100);
+  ctx.bezierCurveTo(70,45,130,45,160,95);
+  ctx.bezierCurveTo(190,45,250,45,250,100);
+  ctx.bezierCurveTo(250,180,160,220,160,240);
 
-    ctx.bezierCurveTo(150,210,60,170,60,95);
-    ctx.bezierCurveTo(60,40,120,40,150,90);
-    ctx.bezierCurveTo(180,40,240,40,240,95);
-    ctx.bezierCurveTo(240,170,150,210,150,230);
+  ctx.closePath();
 
-    ctx.closePath();
-
-    ctx.fill();
-  }
-
-  drawHeart();
+  ctx.fill();
 
   let isDrawing = false;
 
-  function createFlower(x,y){
+  function createBurst(x,y){
 
-    const flower =
-    document.createElement("div");
+    const emojis = [
+      "🌸","🌺","🌼","💮",
+      "🎊","🎉","✨","💖"
+    ];
 
-    flower.innerHTML =
-    ["🌸","🌺","💮","🌼"]
-    [Math.floor(Math.random()*4)];
+    for(let i=0;i<16;i++){
 
-    flower.style.position = "absolute";
+      const item =
+      document.createElement("div");
 
-    flower.style.left = x + "px";
+      item.className = "burst";
 
-    flower.style.top = y + "px";
+      item.innerHTML =
+      emojis[Math.floor(Math.random()*emojis.length)];
 
-    flower.style.fontSize =
-    (18 + Math.random()*10) + "px";
+      item.style.left =
+      x + "px";
 
-    flower.style.pointerEvents =
-    "none";
+      item.style.top =
+      y + "px";
 
-    flower.style.zIndex = "50";
+      item.style.fontSize =
+      (18 + Math.random()*22) + "px";
 
-    flower.style.animation =
-    "flowerFall 1.2s ease-out forwards";
+      item.style.setProperty(
+      "--x",
+      ((Math.random()*350)-175)+"px"
+      );
 
-    document.getElementById("scratchCard")
-    .appendChild(flower);
+      item.style.setProperty(
+      "--y",
+      ((Math.random()*-260)-50)+"px"
+      );
 
-    setTimeout(()=>{
-      flower.remove();
-    },1200);
+      document.getElementById("scratchCard")
+      .appendChild(item);
+
+      setTimeout(()=>{
+        item.remove();
+      },1500);
+    }
   }
 
   function scratch(x,y){
@@ -1067,11 +1009,11 @@ function initScratchCard(){
 
     ctx.beginPath();
 
-    ctx.arc(x,y,30,0,Math.PI*2);
+    ctx.arc(x,y,28,0,Math.PI*2);
 
     ctx.fill();
 
-    createFlower(x,y);
+    createBurst(x,y);
   }
 
   canvas.addEventListener("mousedown",()=>{
